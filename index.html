@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { font-family: sans-serif; background: var(--tg-theme-bg-color); color: var(--tg-theme-text-color); padding: 20px; }
+        .content { line-height: 1.6; white-space: pre-wrap; }
+        .timestamp { color: var(--tg-theme-link-color); font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div id="text-container" class="content">Загрузка текста...</div>
+    <script>
+        const tg = window.Telegram.WebApp;
+        tg.expand();
+        // Здесь должна быть логика получения текста из вашей БД через API
+        document.getElementById('text-container').innerText = "Здесь будет ваш текст с таймкодами из базы данных...";
+    </script>
+</body>
+</html>
